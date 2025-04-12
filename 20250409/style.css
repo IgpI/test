@@ -4,20 +4,22 @@ p {
     margin-bottom: 0;
 }
 .video-title{
-    font-size: 30px;
+    width: 400px;
+    font-size: 14px;
+    line-height: 20px;
     font-weight: bold;
     font-style:italic;
     text-align: Left;
-    font-size: 24px;
-    line-height: 36px;
 }
-.video-stats{
-    font-size: 14px;
+.video-stats,.video-author{
+    display: inline-block;
+    font-size: 12px;
     color: grey;
+    margin: 0 auto;
+    vertical-align: top;
 }
-.video-author{
-    font-size: 14px;
-    color: grey;
+.video-author-div{
+    margin: 0 auto;
 }
 .subscribe-button{
     background-color: rgb(200,0,0);
@@ -44,11 +46,12 @@ p {
     border-style: solid;
     padding:7px 7px;
     cursor: pointer;
+    font-family: "Roboto", sans-serif;
     transition: background-color 1s,
         color 1s;
 }
 .join-button:hover{
-    background-color: aqua;
+    background-color: rgb(11, 124, 124);
     color:white;
 }
 .join-button:active{
@@ -83,4 +86,43 @@ p {
 }
 .span-refer:hover{
     text-decoration: underline;
+}
+.thumbnail{
+    width: 450px;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+}
+.thumbnail-div{
+    margin-bottom: 12px;
+    position: relative;
+}
+.time-movie{
+    justify-content: left;
+    left: 90%;
+}
+.video-preview-all{
+    display: flex;
+    flex-direction: row;
+}
+.video-preview{
+    display: inline-block;
+    margin: 10px;
+}
+.serach-box{
+    display: block;
+    margin: 10px;
+}
+.channel-img-div{
+    display: inline-block;
+    margin: 0px 7px;
+    vertical-align: top;
+}
+.channel-img{
+    width: 36px;
+    height: 36px;
+    border-radius: 40px;
+}
+.video-info{
+    display: inline-block;
 }
