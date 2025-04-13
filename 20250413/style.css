@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration:none;
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    background-color: rgb(194, 194, 194);
+    width: 350px;
+    height: 100%;
+    left: -350px;
+    top:0px;
+    transition: 0.4s;
+}
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    background-color: rgb(68, 65, 65);
+    user-select: none;
+}
+.sidebar-li{
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+    transition: 0.4s;
+    height: 50px;
+}
+.sidebar-li:hover{
+    padding-left: 10px;
+}
+.sidebar ul a {
+    display: inline;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    margin-left: 8px;
+}
+.img-home{
+    width: 36px;
+    height: 36px;
+    border: 1px rgb(80, 77, 77);
+    display: inline-block;
+}
+label #menu-icon{
+    left:40px;
+    transition: 0.4s;
+    pointer-events: all;
+}
+label #cancel{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    cursor:pointer;
+    border-radius: 3px;
+    z-index: 10;
+    left:300px;
+    transition: 0.4s;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #menu-icon{
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    opacity: 1;
+    pointer-events: all;
+}
+.bg{
+    background-image: url("./img/pc-free-img.jpg");
+    height: 100vh;
+    top: 0px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.4s;
+    opacity: 0.8;
+}
+#check:checked ~ .bg{
+    margin-left:350px;
+}
